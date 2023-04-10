@@ -1,0 +1,148 @@
+<html>
+   <head>
+      <title> Learning Platform </title>
+	  <meta char="UTF-8">
+	  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+	   <script>
+       function validpassword(){
+	          var password=document.myform.pass1.value  
+	          var cpassword=document.myform.pass2.value
+	   
+	       if(password.length<6){
+		         alert("Enter minimum 6 digits")
+		         return false
+		   }
+		   
+		  if(password==cpassword){
+		       return true
+             }
+          else{
+		   alert("password & confirm-password must be same")
+		    return false 
+		   } 			 
+	   }
+	   
+	   
+	   function validname(){
+	          var Name=document.myform.name1.value
+	   
+	           if(Name=="null"||Name==""){
+			          alert("enter a proper name")
+			          return false
+			   }
+	   }
+	   
+	   function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+	   
+	   
+	   function validmob(){
+	        var Number=document.myform.mobile.value
+			
+		if(Number.length == 10){
+		    return true
+		
+		}	else{
+		    alert("enter 10 digit number")
+			return false
+		
+		}
+	   
+	   
+	   
+	   }
+        
+      </script>
+   </head>
+     <body>
+	 <div class="container">
+	  <nav> 
+	   <div class="logo">
+	   <img src="images/logo1.png" width="150px" height="100px" alt="Byjus logo">
+	   </div>
+	   <ul>
+	   <li><b> Home</b> </li>
+	   <li> <b>Courses</b> </li>
+	   <li><b> Services </b></li>
+	   <li><b> AboutUs</b> </li>
+	   <li><b> ContactUs </b> </li>
+	   </ul>
+	  </nav>
+	    <div>
+	    <img src="images/pic.png" width="100%" height="60%"/>
+		</div>
+		 <h2> Select your Courses</h2>
+		 <div class="flex-container">
+		 <div> <img src="images/school.png" width="45px" height="35px"/>
+         <h3> School:</h3>
+		 <p> Free classes for a month for classes I to XII</p>
+		 </div>
+		 <div> <img src="images/degree.png" width="45px" height="35px"/> 
+		 <h3> Graduation :</h3>
+		 <p> Book a free class after Sign-in and download the materials for free </p>
+		 </div>
+		 <div> <img src="images/topper.png" width="45px" height="35px"/> 
+		 <h3> Competative Exams:</h3>
+		 <p> Get start with your Student Id for 1 week free Classes</p>
+		 </div>
+		 </div><br/>
+		   <div class="about">
+		   <div class="para">
+		   <h1>BYJU’S The Learning App</h1>
+		    
+
+<b>With the launch of his company’s flagship product, BYJU’S - The Learning App, the company saw two million downloads within three months of its roll out, further transforming the way students learn. With a holistic approach towards education, the app makes learning interactive, adaptive, and personalized through its animated videos, games, quizzes, and more.
+
+Celebrating every type of learner, BYJU’S programs use technology to adapt to the needs of each student’s style and pace. Engagement is at the core of every experience to drive improved cognition, understanding, and learning outcomes.
+
+BYJU’S mission to create new-age, global learning tools is seated at the cross section of technology, interactive content and personalized learning methodologies. The company’s acquisition of Osmo, WhiteHat Jr, Epic and others has further diversified the fields of study and reach.</b>
+		 </div>
+		 <div class="pic">
+		  <img src="images/bj.jpg" height="300px" width="250px">
+		  </div>
+		  </div><br/><br/>
+		  <div class="bb">
+		     <h1 align="center">Book your Free Class </h1>
+			 <h4 align="center"> Learn from India's best teachers </h4>
+			 <h3 align="center" style="color:black;"> Enter Your Details </h3> 
+			 <div class="box"><br/><br/>
+		  <form name="myform" onsubmit="return validmob()" action="output.html">
+	 
+	Your Name :<br/>
+	<input type="text" name="name1" pattern="[a-z,A-Z ]{3,}">
+	   
+	    <input type="submit" value="check"/><br/><br/>
+		
+		
+		
+	Email:<br/>
+	<input type="text" name="email"><br/> <br/>
+		
+		
+	
+		
+		
+		Mobile Number :<input type="number" name="mobile" required/><br/><br/>
+		
+		 Password :<br/>
+		 <input type="password" name="pass1"/><br/><br/>
+  confirm password :<br/>
+  <input type="password" name="pass2"/><br/><br/>
+    
+ 
+		  
+		  <button class="button"> Schedule a Free Class </button>
+		  </form>
+		  </div>
+		  </div>
+	 </body>
+</html>
